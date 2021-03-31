@@ -22,7 +22,7 @@ class Main {
 
 			System.out.println(resutado);
 		}else{
-			System.out.println("os valores de X,Y,Z devem estar entre [0,1].");
+			System.out.println("os valores de X,Y,Z devem estar entre [0,2].");
 		}
 
   }
