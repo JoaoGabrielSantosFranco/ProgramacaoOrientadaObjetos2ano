@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-class Ackley {
-  public static void Ackley(String[] args) {
+class Main {
+  public static void Main(String[] args) {
 
 		Scanner leitor = new Scanner(System.in);
 
