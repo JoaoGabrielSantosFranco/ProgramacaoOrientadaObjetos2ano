@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+				Scanner leitor = new Scanner(System.in);
+
+		System.out.println("Digite o valor x");
+		double x = leitor.nextDouble();
+
+		System.out.println("Digite o valor y");
+		double y = leitor.nextDouble();
+
+		System.out.println("Digite o valor z");
+		double z = leitor.nextDouble();
+		if (x>0 && x <3 && y>0 && y <3 && z>0 && z <3){
+			double Fração = 4.0/3.0;
+
+			double parenteses =((x*x)+(y*y)-(x*y));
+			double decim = Math.pow(parenteses,0.75);
+			double resutado = ((Fração*decim)+z);
+
+			System.out.println(resutado);
+		}else{
+			System.out.println("os valores de X,Y,Z devem estar entre [0,1].");
+		}
+
+  }
+}
