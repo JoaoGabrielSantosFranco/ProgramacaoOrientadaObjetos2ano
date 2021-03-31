@@ -25,7 +25,7 @@ class Ackley {
 			double resut =(-200*elevado);
 			System.out.println("resutado :" + resut);
 		}else{
-			System.out.println("os valores de Y e X devem ser maiores que -32 e menores que 32.");
+			System.out.println("os valores de Y e X devem estar entre[-32,32].");
 		}
 
   }
