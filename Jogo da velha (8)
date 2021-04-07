@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		System.out.println("JOGO DA FORCA");
+		System.out.println("Qual sera a palavra da forca? :");
+		String entrada = leitor.nextLine();
+		///Cabecario inicial 
+
+		for(int i = 0; i < 100; ++i){
+			System.out.println("");
+		}
+		///para apagar a tela 
+		
+		System.out.println("------------REGRAS------------");
+		System.out.println("¹-apos descobrir a palavra digite a para que o jogo finalize.");
+		System.out.println("²-você possui apenas 3 tentativas que serão tiradas a cada erro então tome cuidado");
+		System.out.println("------------------------------");
+		System.out.println("INICIANDO FORCA...");
+		///Cabecario
+
+
+		int tamanho = entrada.length();///tamanho da entrada
+		int tentativas = 3;
+		char formaPalavra[] = new char[entrada.length()];
+		entrada = entrada.toLowerCase();
+
+		///variaveis iniciais
+
+
+
+
+		/// variavel com tamanho da palavra
+		for(int i = 0; i < entrada.length();i++){
+			formaPalavra[i] += '*';
+		}
+
+		for(int j = 0; j < tentativas;){
+
+			System.out.print("Diga uma letra  : ");
+			String tentativa = leitor.nextLine();
+			tentativa = tentativa.toLowerCase();
+
+			if(entrada.contains(tentativa)){
+			for (int i = 0; i < tamanho;i++){
+				String b = entrada.substring(i,i+1);
+				///Retorna a sequência da string entre os indíces begin e end. O caracter da posição end não é incluído.
+				
+			if(tentativa.equalsIgnoreCase(entrada)){
+				System.out.println("VOCE GANHOU!!!");
+			}else{
+				System.out.println("");
+			}
+
+
+				if(tentativa.equalsIgnoreCase(b)){
+					formaPalavra[i] = tentativa.charAt(0);
+					System.out.print("palavra da forca : ");
+					System.out.println(formaPalavra);
+
+				}else{
+						System.out.println("");
+				
+				}
+				}
+			}else{
+				System.out.println("a palavra não tem a letra  "+tentativa+"  tente novamente");
+				tentativas -=1;
+			}
+			}
+
+
+			if (tentativas == 0){
+			System.out.println("VOCÊ PERDEU PLAYBOY");
+			}else{
+				System.out.println("");
+			}
+
+
+  }
+}
