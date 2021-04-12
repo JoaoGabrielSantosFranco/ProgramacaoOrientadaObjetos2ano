@@ -1,0 +1,113 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+
+		Scanner leitor = new Scanner(System.in);
+
+		int tamanho = 2;
+		int [] Linha1Avetor = new int[tamanho];
+		int [] Linha2Avetor = new int[tamanho];
+
+		int [] Linha1Bvetor = new int[tamanho];
+		int [] Linha2Bvetor = new int[tamanho];
+
+		
+		System.out.println("Dados da matriz A");
+
+		for (int i = 0; i < Linha1Avetor.length;i++){
+
+			System.out.print("Informe o elemento da "+(i+1)+"° coluna da linha 1 : ");
+
+			Linha1Avetor[i] = leitor.nextInt();
+
+		}
+		System.out.println("");
+		
+		for (int i = 0; i < Linha2Avetor.length;i++){
+
+			System.out.print("Informe os elementos da "+(i+1)+"° coluna da linha 2 : ");
+
+			Linha2Avetor[i] = leitor.nextInt();
+
+		}
+		System.out.println("");
+		System.out.println("");
+
+		System.out.println("Dados da matriz B");
+
+		for (int i = 0; i < Linha1Bvetor.length;i++){
+
+			System.out.print("Informe os elementos da "+(i+1)+"° coluna da linha 1 : ");
+
+			Linha1Bvetor[i] = leitor.nextInt();
+
+		}
+		System.out.println("");
+		
+		for (int i = 0; i < Linha2Bvetor.length;i++){
+
+			System.out.print("Informe os elementos da "+(i+1)+"° coluna da linha 2 : ");
+
+			Linha2Bvetor[i] = leitor.nextInt();
+
+		}
+		System.out.println("");
+
+		/// inicio matriz 1
+		System.out.println("");
+		System.out.println("Matriz 1");
+		for (int i = 0; i< Linha1Avetor.length;i++){
+			System.out.print(Linha1Avetor[i]);
+			System.out.print(" ");
+		}
+		System.out.println("");
+		for (int i = 0; i< Linha2Avetor.length;i++){
+			System.out.print(Linha2Avetor[i]);
+			System.out.print(" ");
+		}
+
+		System.out.println("");
+		System.out.println("");
+		///Matriz 1 Fim
+		
+		///Inicio matriz 2:
+		System.out.println("");
+		System.out.println("Matriz 2");
+		for (int i = 0; i< Linha1Bvetor.length;i++){
+			System.out.print(Linha1Bvetor[i]);
+			System.out.print(" ");
+		}
+		System.out.println("");
+		for (int i = 0; i< Linha2Bvetor.length;i++){
+			System.out.print(Linha2Bvetor[i]);
+			System.out.print(" ");
+		}
+
+		System.out.println("");
+		System.out.println("");
+		/// Fim Matriz 2:
+
+		///inicio dos calculos 
+
+
+		int LinumColum = ((Linha1Avetor[0]*Linha1Bvetor[0])+(Linha1Avetor[1]*Linha2Bvetor[0]));
+
+		int LinumColdois = ((Linha1Avetor[0]*Linha1Bvetor[1])+(Linha1Avetor[1]*Linha2Bvetor[1]));
+
+		int LindoisColum = ((Linha2Avetor[0]*Linha1Bvetor[0])+(Linha2Avetor[1]*Linha2Bvetor[0]));
+
+		int LindoisColdois =  ((Linha2Avetor[0]*Linha1Bvetor[1])+(Linha2Avetor[1]*Linha2Bvetor[1]));
+
+		/// soma dos dois 
+		System.out.println(" SOMA ");
+		System.out.print(LinumColum);
+		System.out.print("  ");
+		System.out.print(LinumColdois);
+		System.out.println("  ");
+		System.out.print(LindoisColum);
+		System.out.print("  ");
+		System.out.print(LindoisColdois);
+
+
+  }
+}
