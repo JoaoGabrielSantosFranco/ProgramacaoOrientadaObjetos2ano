@@ -1,0 +1,112 @@
+import java.util.Scanner;
+class RotacionarMatriz {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        System.out.println("Diga o tamanho da matriz");
+        int valor = leitor.nextInt();
+        int tamanhomatriz [][]=new int [valor][valor];
+        int matrizauxiliar[][]=new int [valor][valor];
+        
+        System.out.println("dados da matriz");
+        
+        for(int i = 0; i<valor;i++){
+            System.out.println("informe o valor da fileira "+(i+1));
+            System.out.println(" ");
+            for(int j = 0; j<valor;j++){
+                System.out.println(+j+1+"° Valor");
+                tamanhomatriz[i][j] =leitor.nextInt();
+                System.out.println(" ");
+                
+            }
+            
+        }
+        
+        System.out.println(" ");        
+        System.out.println(" ");
+        System.out.println("selecine a opção que quer rotacionar (1/2/3/4/5)");
+        /// 0, 90, 180, 270 e 360
+        System.out.println("1) 0°");
+        System.out.println("2) 90°");
+        System.out.println("3) 180°");
+        System.out.println("4) 270°");
+        System.out.println("5) 360°");
+        
+
+        int a = leitor.nextInt();
+        switch(a){
+            case 1:
+                System.out.println("Matriz rotou 0 Graus");
+                for(int i = 0; i<valor;i++){
+                    for(int j = 0; j<valor;j++){
+                        System.out.print(tamanhomatriz[i][j]+" ");
+                    }
+                    System.out.println(" ");
+                }
+                
+                
+                
+                
+                break;
+            case 2:
+                System.out.println("Matriz rotou 90 Graus");
+                for(int i = 0; i<valor;i++){
+                    for(int j = 0; j<valor;j++){
+                        System.out.print(tamanhomatriz[valor - 1 - j ][i]+" ");
+                    }
+                    System.out.println(" ");
+                }         
+            
+            
+                
+                break;
+            case 3:
+                System.out.println("Matriz rotou 180 Graus");
+                for(int i = 0; i<valor;i++){
+                    for(int j = 0; j<valor;j++){
+                        System.out.print(tamanhomatriz[valor - 1 - i ][valor - 1 - j ]+" ");
+                    }
+                    System.out.println(" ");
+                }            
+            
+
+             
+             
+                break;
+            case 4:
+                System.out.println("Matriz rotou 270 graus");
+                for (int i = 0; i < valor; i++) {
+                    for (int j = 0; j < valor; j++) {
+                        System.out.print(tamanhomatriz[j][valor - 1 - i] + " ");
+                    }
+                    System.out.println("");
+                }
+                
+                
+                break;
+            case 5:
+                System.out.println("Matriz rotou 360 graus");
+                for(int i = 0; i<valor;i++){
+                    for(int j = 0; j<valor;j++){
+                        System.out.print(tamanhomatriz[i][j]+" ");
+                    }
+                    System.out.println(" ");
+                }
+                
+
+                break;
+            }
+        System.out.println("  ");   
+        System.out.println("Matriz Inicial ");
+        for(int i = 0; i<valor;i++){
+            for(int j = 0; j<valor;j++){
+                System.out.print(tamanhomatriz[i][j]+" ");
+            }
+            System.out.println(" ");
+        }
+             
+
+
+    }
+}
