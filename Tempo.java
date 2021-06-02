@@ -7,11 +7,6 @@ class Tempo {
     private int segundos;
     private int milisegundos;
 
-    public Tempo() {
-        this(0, 0, 0,0);
-    }
-
-
 
     public Tempo(int horas, int minutos, int segundos, int milisegundos) {
         setHoras(horas);
@@ -66,7 +61,7 @@ class Tempo {
             return milisegundosTempo(this.emMilisegundos() + tempo.emMilisegundos());
     }
 
-    public Tempo inicialreal (Tempo tempo){
+    public Tempo inicialreal(){
         return milisegundosTempo((this.emMilisegundos()));
     }
 
