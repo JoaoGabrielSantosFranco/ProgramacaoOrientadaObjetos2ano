@@ -2,8 +2,7 @@ package pacote;
 
 public class principal {
     public static void main(String[] args) {
-        Tempo adicionar = new Tempo();
-        Tempo Inicial = new Tempo(12, 00, 0 ,0);
+        Tempo Inicial = new Tempo(12, 0, 0 ,0);
         Tempo Variavel = new Tempo(6, 20, 0,0);
         Tempo Sub = Inicial.subtrair(Variavel);
         Tempo soma = Inicial.somar(Variavel);
