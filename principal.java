@@ -1,24 +1,29 @@
-package pacote;
+package pack;
 
 public class principal {
+
     public static void main(String[] args) {
-        Tempo Inicial = new Tempo(12, 0, 0 ,0);
-        Tempo Variavel = new Tempo(6, 20, 0,0);
-        Tempo Sub = Inicial.subtrair(Variavel);
-        Tempo soma = Inicial.somar(Variavel);
-        Tempo real = Inicial.inicialreal(Inicial) ;
+        Mouse mouse = new Mouse();
+        mausebluetooth mousebluetooth = new mausebluetooth();
+        MauseGamer mousegamer = new MauseGamer();
 
+        System.out.println("Mouse");
+        mouse.Botoes();
+        mouse.Leitor();
+        mouse.entrada();
 
-        System.out.print("horario inicial :  " );
-        real.imprimir();
-        System.out.print("horario informado :  ");
-        Variavel.imprimir();
-        System.out.print("horario inicial menos horario informado :  ");
-        Sub.imprimir();
-        System.out.print("horario inicial mais horario informado :  " );
-        soma.imprimir();
+        System.out.println("");
+        System.out.println("MouseBluetooth");
+        mousebluetooth.Botoes();
+        mousebluetooth.Leitor();
+        mousebluetooth.entrada();
 
-
+        System.out.println("");
+        System.out.println("MouseGamer");
+        mousegamer.Leitor();
+        mousegamer.Botoes();
+        mousegamer.entrada();
+        mousegamer.sist();
 
     }
 }
