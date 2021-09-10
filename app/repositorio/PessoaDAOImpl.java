@@ -9,17 +9,20 @@ import java.util.Map;
 
 class PessoaDAOImpl implements PessoaDAO {
     private Map<Integer, Pessoa> dados = new HashMap<>();
-    private int identificador = 0;
+    private int identificador ;
 
     @Override
     public int adicionar(Pessoa p) {
-        dados.put(p.getID(), p);
+        identificador = dados.size();
+        p.setID(identificador);
+        dados.put((identificador), p);
         System.out.println(p + "     -ADICIONADO- "  );
         return identificador;
     }
 
     @Override
     public void atualizar(Pessoa p) {
+        dados.replace(p.getID(),p);
     }
 
     @Override

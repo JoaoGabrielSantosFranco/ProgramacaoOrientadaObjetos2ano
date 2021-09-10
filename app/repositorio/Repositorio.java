@@ -5,8 +5,8 @@ import app.entidade.Pessoa;
 
 public class Repositorio {
 
-    private static Repositorio instancia = null;
-
+    private static Repositorio instancia ;
+    private static  PessoaDAOImpl PessoaDAO;
     private Repositorio() {
     }
     public synchronized static Repositorio obterInstancia() {
@@ -14,9 +14,8 @@ public class Repositorio {
             instancia = new Repositorio();
         return instancia;
     }
-    public PessoaDAO pessoas() {
-        PessoaDAO eu = new PessoaDAOImpl();
-        return eu;
+    public static PessoaDAO pessoas() {
+        PessoaDAO = new PessoaDAOImpl();
+        return PessoaDAO;
     }
-
 }
