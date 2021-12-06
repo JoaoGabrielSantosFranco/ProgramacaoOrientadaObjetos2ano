@@ -1,0 +1,29 @@
+PRAGMA foreign_keys = 0;
+
+CREATE TABLE sqlitestudio_temp_table AS SELECT *
+                                          FROM To_do_List;
+
+DROP TABLE To_do_List;
+
+CREATE TABLE To_do_List (
+    CheckBox INTEGER,
+    Info     STRING,
+    Date     DATE,
+    Pk       INTEGER PRIMARY KEY
+);
+
+INSERT INTO To_do_List (
+                           CheckBox,
+                           Info,
+                           Date,
+                           Pk
+                       )
+                       SELECT CheckBox,
+                              Info,
+                              Date,
+                              Pk
+                         FROM sqlitestudio_temp_table;
+
+DROP TABLE sqlitestudio_temp_table;
+
+PRAGMA foreign_keys = 1;
